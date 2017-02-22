@@ -3345,6 +3345,14 @@ nav ul a span.badge {
           font-feature-settings: 'liga';
 }
 
+.material-icons.md-30 {
+  font-size: 30px;
+}
+
+.material-icons.whiteicon {
+  color: white;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
