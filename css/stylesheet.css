@@ -14,3 +14,16 @@
 	display: inline-block;
 
 }
+
+.header img {
+	width: 125px;
+}
+
+@media screen and (max-width: 800px) {
+	.copyright {
+		text-align: center;
+	}
+	.icon-image {
+		text-align: center;
+	}
+}
