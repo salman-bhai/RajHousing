@@ -3,11 +3,42 @@
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo center"><img src="images/bcompany.jpg"></a>
       <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="#!">Home</a></li>
-        <li><a href="#!">Contact Us</a></li>
-        <li><a href="#!">Link 3</a></li>
-        <li><a href="#!">Link 4</a></li>
+        <li id="first"><a href="index.html">Home</a></li>
+        <li id="second"><a href="#!">Contact Us</a></li>
+        <li id="third"><a href="#!">Gallery</a></li>
+        <li id="fourth"><a href="#!">Link 4</a></li>
       </ul>
     </div>
   </nav>
 </div>
+<script type="text/javascript">
+  function getPageName(url) {
+      var index = url.lastIndexOf("/") + 1;
+      var filenameWithExtension = url.substr(index);
+      var filename = filenameWithExtension.split(".")[0];
+      return filename;
+  }
+  $(document).ready(function() {
+    $("#first").removeClass("active");
+    $("#second").removeClass("active");
+    $("#third").removeClass("active");
+    $("#fourth").removeClass("active");    
+    var pathname = window.location.pathname;
+    var filename = getPageName(pathname);
+    switch (filename) {
+      case "index":
+        $("#first").addClass("active");
+        break;
+      case "gallery":
+        $("#third").addClass("active");
+        break;
+    }
+  });
+</script>
+<style type="text/css">
+
+  .header img {
+    width: 113px;
+  }
+
+</style>
