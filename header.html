@@ -1,12 +1,12 @@
 <div class="header">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center"><img src="images/bcompany.jpg"></a>
+      <a href="index.html" class="brand-logo center"><img src="images/logo.jpg"></a>
       <ul class="right hide-on-med-and-down">
         <li id="first"><a href="index.html">Home</a></li>
-        <li id="second"><a href="#!">Contact Us</a></li>
-        <li id="third"><a href="#!">Gallery</a></li>
-        <li id="fourth"><a href="#!">Link 4</a></li>
+        <li id="second"><a href="team.html">Team</a></li>
+        <li id="third"><a href="projects.html">Projects</a></li>
+        <li id="fourth"><a href="gallery.html">Gallery</a></li>        
       </ul>
     </div>
   </nav>
@@ -29,16 +29,22 @@
       case "index":
         $("#first").addClass("active");
         break;
-      case "gallery":
+      case "team":
+        $("#second").addClass("active");
+        break;
+      case "projects":
         $("#third").addClass("active");
+        break;
+      case "gallery":
+        $("#fourth").addClass("active");
         break;
     }
   });
 </script>
-<style type="text/css">
+<!--<style type="text/css">
 
   .header img {
-    width: 113px;
+    
   }
 
-</style>
+</style>-->
