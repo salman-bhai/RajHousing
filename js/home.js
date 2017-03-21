@@ -5,6 +5,6 @@ function autoplay() {
 $(document).ready(function() {
 	$('#header').load('header.html');
 	$('#footer').load('footer.html');
-	$('.carousel.carousel-slider').carousel({fullWidth: true, startHeight: '550px'});
+	$('.carousel.carousel-slider').carousel({fullWidth: true, startHeight: '600px'});
 	setTimeout(autoplay, 2000);
 });
