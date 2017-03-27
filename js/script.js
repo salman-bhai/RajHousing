@@ -3,7 +3,7 @@ function init() {
 		$('#header').load('header.html');
 		$('#footer').load('footer.html');
 		$('.materialboxed').materialbox();
-		$('.slider').slider({interval: 3000, height: 575});
+		$('.slider').slider({interval: 3000, height: 550});
 	});
 }
 
@@ -29,7 +29,7 @@ function load_members(){
 	var gallery_container = document.getElementById("gallery");
 	// Core members
 	var gallery_row;
-	gallery_container.innerHTML += '<h2 class="label">Founding Team</h2>';
+	gallery_container.innerHTML += '<h3 class="label">Core Team</h3>';
 	gallery_container.innerHTML += '<div id="core-gallery-row"></div>';
 	gallery_row = document.getElementById('core-gallery-row');
 	for(var i=0;i<core_members.length;i++){
@@ -41,7 +41,7 @@ function load_members(){
 	gallery_container.innerHTML += '<div class="center button-container"><a class="prev-core btn-floating btn-large waves-effect waves-light indigo darken-4"><i class="material-icons">chevron_left</i></a>';
 	gallery_container.innerHTML += '<a class="next-core btn-floating btn-large waves-effect waves-light indigo darken-4"><i class="material-icons">chevron_right</i></a></div>';
 	// Tech Members
-	gallery_container.innerHTML += '<h2 class="label">Tech Team</h2>';
+	gallery_container.innerHTML += '<h3 class="label">Website Developer Team</h3>';
 	gallery_container.innerHTML += '<div  id="tech-gallery-row"></div>';
 	gallery_row = document.getElementById('tech-gallery-row');
 	for(var i=0;i<tech_members.length;i++){
