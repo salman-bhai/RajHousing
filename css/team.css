@@ -84,9 +84,6 @@
 }
 
 @media only screen and (max-width : 720px) {
-	#core-gallery-row {
-		overflow-x: scroll;
-	}
 
 	.team-member {
 		width: 65vw;
