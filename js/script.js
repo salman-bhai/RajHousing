@@ -11,7 +11,7 @@ function get_web_model(member){
 	var model = "";
 	model += '<div class="team-member"><div class="card center-align">';
 	model += '<div class="card-content">';
-	model += '<div class="team-member-bg indigo darken-4"></div>';
+	model += '<div class="team-member-bg brown lighten-2"></div>';
 	model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
 	model += '<h6><b>'+member.name+'</b></h6>';
 	model += '<div class="team-member-info">'
@@ -29,7 +29,7 @@ function get_managing_model(member){
 	var model = "";
 	model += '<div class="team-member"><div class="card center-align">';
 	model += '<div class="card-content">';
-	model += '<div class="team-member-bg indigo darken-4"></div>';
+	model += '<div class="team-member-bg brown lighten-2"></div>';
 	model += '<img src="'+member.image+'" class="circle responsive-img materialboxed" data-caption="'+member.name+'">';
 	model += '<h6><b>'+member.name+'</b></h6>';
 	model += '<div class="team-member-info">'
@@ -65,8 +65,8 @@ function load_members(){
 	  var member_container = document.getElementById('tech-member-'+i);
 	  member_container.innerHTML += get_web_model(member);
 	}
-	gallery_container.innerHTML += '<div class="center button-container"><a class="prev-core btn-floating btn-large waves-effect waves-light indigo darken-4"><i class="material-icons">chevron_left</i></a>';
-	gallery_container.innerHTML += '<a class="next-core btn-floating btn-large waves-effect waves-light indigo darken-4"><i class="material-icons">chevron_right</i></a></div>';
+	gallery_container.innerHTML += '<div class="center button-container"><a class="prev-core btn-floating btn-large waves-effect waves-light brown lighten-2"><i class="material-icons">chevron_left</i></a>';
+	gallery_container.innerHTML += '<a class="next-core btn-floating btn-large waves-effect waves-light brown lighten-2"><i class="material-icons">chevron_right</i></a></div>';
 }
 
 function initializeTeamMembers() {
