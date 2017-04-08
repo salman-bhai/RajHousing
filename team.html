@@ -17,20 +17,27 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 			<link rel="stylesheet" href="css/stylesheet.css">
+			<link rel="stylesheet" href="css/team.css">
 
 			<!--JavaScript files-->
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
 			</script>
 			<script src="js/materialize.js">
 			</script>
+			<script type="text/javascript" src="js/script.js"></script>
 			<script type="text/javascript" src="js/team.js"></script>
 			<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 		 </head>
 
-		<body class="indigo lighten-5">
+		<body onload="init(); load_members(); initializeTeamMembers();">
 			<div id="header"></div>
-			<div class="wrapper"></div>
+			<center>
+
+				<div class="team-container" id="gallery">
+				</div>
+
+			</center>
 			<div id="footer"></div>
 
 		</body>
