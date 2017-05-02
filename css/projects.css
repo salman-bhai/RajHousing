@@ -1,0 +1,58 @@
+h5 a {
+	color: #4d4f52;
+}
+
+h5 a:hover {
+	color: #ef5350;
+}
+
+.space {
+	display: inline-block;
+	padding: 6px 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	border-color: #bdbdbd;
+	color: #757575;
+}
+
+.section {
+	margin-top: 20px;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+}
+
+.section:hover {
+	background-color: white;
+}
+
+.section:active {
+	background-color: #f5f5f5;
+}
+
+.image {
+	border-radius: 5px;
+}
+
+.tabs .indicator {
+	background-color: #bcaaa4;
+}
+
+@media only screen and (max-width: 992px) {
+	.image {
+		border-radius: 5px;
+		display: block;
+		margin: auto;
+	}
+
+	.text-description {
+		text-align: center;
+	}
+
+	.section:hover {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		background-color: #f5f5f5;
+	}
+}
