@@ -1,0 +1,81 @@
+.breadcrumb:before {
+	color: #795548;
+}
+
+.nav-location {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.collapsible {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-left: 0px;
+	border-right: 0px;
+    border-top: 1px solid #ddd;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.collapsible-body {
+	padding: 25px;
+	font-weight: 500;
+}
+
+.collapsible-header:hover {
+	color: #df4a43;
+}
+
+.collapsible li {
+	padding-bottom: 0px;
+}
+
+.project-name {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.underline {
+	border-bottom: 5px double #795548;
+}
+
+.google-maps {
+	width: 600px;
+	height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.google-maps {
+		width: 350px;
+		height: 275px;
+	}
+
+	.container {
+		text-align: center;
+	}
+
+	.collapsible {
+		width: 100%;
+		margin: 0px 0px;
+	}
+
+	.nav-location {
+		display: none;
+	}
+
+	.para {
+		text-align: justify;
+	}
+
+	.project-name {
+		margin-top: 20px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.nav-location {
+		display: block;
+	}
+}

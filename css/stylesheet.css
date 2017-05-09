@@ -1,0 +1,47 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.slider .slides li {
+	padding-bottom: 0px;
+}
+
+.slider .indicators .indicator-item {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #795548;
+}
+
+.slider .indicators {
+  bottom: 60px;
+  z-index: 100;
+}
+
+.left-card {
+	clear: right;
+	width: 55%;
+	margin-left: 3%;
+}
+.right-card {
+	width: 55%;
+	margin-right: 3%;
+	float: right;
+}
+
+@media screen and (max-width: 1280px) {
+	.left-card {
+		clear: both;
+		width: 100%;
+		margin: 0% 0%;
+	}
+
+	.right-card {
+		clear: both;
+		width: 100%;
+		margin: 0% 0%;
+	}
+}
