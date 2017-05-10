@@ -15,6 +15,8 @@ function capitalizeFirstLetter(string) {
 
 $(document).ready(function() {
 	$('.collapsible').collapsible();
+	$('#link-to-gallery').attr("href","gallery.html?type=" + GetURLParameter('type') + "&activate=" + GetURLParameter('activate'));
+	$('#link-to-gallery').attr("target","_blank");
 	$('#nav-location-type').append(capitalizeFirstLetter(GetURLParameter('type')) + ' Projects');
 	var project_name = GetURLParameter('project').replace(/([A-Z])/g, ' $1').trim();
 	project_name = project_name.replace(/[^0-9](?=[0-9])/g, '$& ')

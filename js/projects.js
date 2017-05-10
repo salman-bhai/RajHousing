@@ -16,7 +16,7 @@ function load_ongoing_projects() {
 		section_container.innerHTML += '<div class="col l4 m12 s12"><img src="' + project.image + '" class="materialboxed image" height="250px"></div>';
 		section_container.innerHTML += '<div id="ongoing-details-' + i + '" class="col l8 m12 s12 text-description"></div>';
 		var details_container = document.getElementById("ongoing-details-" + i);
-		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=ongoing&project=' + parameter + '" style="">' + project.name + '</a></h5>';
+		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=ongoing&project=' + parameter + '&activate=' + i + '" style="">' + project.name + '</a></h5>';
 		details_container.innerHTML += '<h6 style="margin-top: 5px; font-style: italic; color: #999;">' + project.company + '</h6>'
 		details_container.innerHTML += '<hr>';
 		details_container.innerHTML += '<p style="color: #757575;">' + project.description + '</p>';
@@ -39,7 +39,7 @@ function load_upcoming_projects() {
 		section_container.innerHTML += '<div class="col l4 m12 s12"><img src="' + project.image + '" class="materialboxed image" height="250px"></div>';
 		section_container.innerHTML += '<div id="upcoming-details-' + i + '" class="col l8 m12 s12 text-description"></div>';
 		var details_container = document.getElementById("upcoming-details-" + i);
-		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=upcoming&project=' + parameter + '" style="">' + project.name + '</a></h5>';
+		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=upcoming&project=' + parameter + '&activate=' + i + '" style="">' + project.name + '</a></h5>';
 		details_container.innerHTML += '<h6 style="margin-top: 5px; font-style: italic; color: #999;">' + project.company + '</h6>'
 		details_container.innerHTML += '<hr>';
 		details_container.innerHTML += '<p style="color: #757575;">' + project.description + '</p>';
@@ -62,7 +62,7 @@ function load_completed_projects() {
 		section_container.innerHTML += '<div class="col l4 m12 s12"><img src="' + project.image + '" class="materialboxed image" height="250px"></div>';
 		section_container.innerHTML += '<div id="completed-details-' + i + '" class="col l8 m12 s12 text-description"></div>';
 		var details_container = document.getElementById("completed-details-" + i);
-		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=completed&project=' + parameter + '" style="">' + project.name + '</a></h5>';
+		details_container.innerHTML += '<h5 style="margin-bottom: 0px;"><a href="project_expand.html?type=completed&project=' + parameter + '&activate=' + i + '" style="">' + project.name + '</a></h5>';
 		details_container.innerHTML += '<h6 style="margin-top: 5px; font-style: italic; color: #999;">' + project.company + '</h6>'
 		details_container.innerHTML += '<hr>';
 		details_container.innerHTML += '<p style="color: #757575;">' + project.description + '</p>';
