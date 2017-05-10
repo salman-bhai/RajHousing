@@ -23,6 +23,7 @@ $(document).ready(function() {
 	$('#nav-location-project').append(project_name);
 	$('#project-name').append(project_name);
 	document.title = project_name;
+
 	var type, index;
 	if (GetURLParameter('type') == 'ongoing') {
 		type = "ongoing";
@@ -58,6 +59,7 @@ $(document).ready(function() {
 	var first_row_handle = document.getElementById("first-row");
 	var second_row_handle = document.getElementById("second-row");
 	var third_row_handle = document.getElementById("third-row");
+
 	if (type == "ongoing") {
 		$('#project-image').attr('src', ongoing_projects[index].image);
 		$("#location").append(ongoing_projects[index].location);
@@ -173,6 +175,7 @@ var ongoing_projects = [
 			"Well Equipped GYM",
 			"Attractive Elevation",
 		],
+
 	},
 	{
 		"name": "Ashtavinayak Avenue Phase 1",
@@ -181,6 +184,7 @@ var ongoing_projects = [
 		"image": "images/projects/dummy1/pic.jpg",
 		"space": "35 residential",
 		"location":"PIN Code 421501<br>Pale, Ambernath - East",
+
 		"towers":"<i class='material-icons'>business</i>2 Towers of Stilt+9 &amp; G+7 storey",
 		"towers_content": "1 BHK / 1 BHK &amp; 2 BHK with Terrace Flats<br>1 BHK : 511 - 849 ( Area in sq.ft.)<br>2 BHK : 853 - 1196( Area in sq.ft.)<br>3,151 / Sq. Ft.<br>Possession : December 2019",
 		"details_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>",
@@ -212,6 +216,7 @@ var upcoming_projects = [
 		"image": "images/projects/dummy1/pic.jpg",
 		"space": "1 BHK / 1 BHK & 2 BHK with Terrace Flats",
 		"location":"PIN Code 421501<br>Pale, Ambernath - East",
+
 		"towers":"<i class='material-icons'>business</i>2 Towers of Stilt+9 &amp; G+7 storey",
 		"towers_content": "1 BHK / 1 BHK &amp; 2 BHK with Terrace Flats<br>1 BHK : 511 - 849 ( Area in sq.ft.)<br>2 BHK : 853 - 1196( Area in sq.ft.)<br>3,151 / Sq. Ft.<br>Possession : December 2019",
 		"details_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>",
