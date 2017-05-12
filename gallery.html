@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Raj Housing</title>
+			<title>Gallery - Raj Housing</title>
+
 
 			<!--Import Google Icon Font-->
 			<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,6 +18,8 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 			<link rel="stylesheet" href="css/stylesheet.css">
+			<link rel="stylesheet" href="css/gallery.css">
+			<link rel="stylesheet" href="css/lightbox.css">
 
 			<!--JavaScript files-->
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
@@ -24,12 +27,26 @@
 			<script src="js/materialize.js">
 			</script>
 			<script type="text/javascript" src="js/script.js"></script>
+			<script type="text/javascript" src="js/gallery.js"></script>
+			<script type="text/javascript" src="js/lightbox.js"></script>
 			<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 		 </head>
 
-		<body onload="init();">
+		<body onload="init(); load_ongoing(); load_upcoming(); load_completed(); load_active();">
 			<div id="header"></div>
+
+			<div class="container" style="margin-top: 10px;">
+				<h4 class="brown-text project-type" style="margin-top: 30px;">Ongoing Projects</h4>
+				<hr>
+				<ul class="collapsible" data-collapsible="accordion" style="margin-bottom: 30px;" id="ongoing-section"></ul>
+				<h4 class="brown-text project-type" style="margin-top: 30px;">Upcoming Projects</h4>
+				<hr>
+				<ul class="collapsible" data-collapsible="accordion" style="margin-bottom: 30px;" id="upcoming-section"></ul>
+				<h4 class="brown-text project-type" style="margin-top: 30px;">Completed Projects</h4>
+				<hr>
+				<ul class="collapsible" data-collapsible="accordion" style="margin-bottom: 30px;" id="completed-section"></ul>
+			</div>
 
 			<div id="footer"></div>
 

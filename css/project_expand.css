@@ -8,6 +8,10 @@
 	box-shadow: none;
 }
 
+.nav-wrapper {
+	padding-left: 10px;
+}
+
 .collapsible {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -46,6 +50,10 @@
 	height: 450px;
 }
 
+.para {
+	line-height: 1.2;
+}
+
 @media only screen and (max-width: 992px) {
 
 	.google-maps {
@@ -62,17 +70,39 @@
 		margin: 0px 0px;
 	}
 
+	.nav-location > div > div {
+		max-height: 75px !important;
+	}
+
 	.nav-location {
-		display: none;
+		text-align: center;
+		height: 75px;
+		text-overflow: ellipsis;
+	}
+
+	#nav-location-project {
+		max-height: 75px !important;
+		text-overflow: ellipsis;
+	}
+
+	.nav-wrapper {
+		padding-left: 0px;
+	}
+
+	.breadcrumb:before {
+		margin: 1px;
+		max-height: 75px;
+		font-size: 17px;
+	}
+
+	.nav-location > div > div > a {
+		font-size: 16px;
 	}
 
 	.para {
 		text-align: justify;
 	}
 
-	.project-name {
-		margin-top: 20px;
-	}
 }
 @media only screen and (min-width: 992px) {
 	.nav-location {
