@@ -1,0 +1,96 @@
+body {
+	margin-top: 100%;
+}
+
+.header-wrapper {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.mbackdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background-image: url(../images/backdrop.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-filter: brightness(50%);
+	   -moz-filter: brightness(50%);
+	        filter: brightness(50%);
+	height: 100%;
+	width: 100%;
+}
+
+.header {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	-webkit-transition: all .3s ease-out;
+	     -o-transition: all .3s ease-out;
+	        transition: all .3s ease-out;
+}
+
+.head-title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	font-size: 200%;
+	font-weight: 300;
+	padding: 1%;
+	color: white;
+	z-index: 10;
+}
+
+.header nav {
+	background-color: transparent;
+	text-align: right;
+	box-shadow: 0 0 0 transparent;
+}
+
+.header .mlogo {
+	opacity: 0;
+}
+
+.header img {
+	/*-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	        transform: translateY(-50%);*/
+	height: 40px;
+	width: auto;
+}
+
+.header-fixed {
+	position: fixed !important;
+	top: 0 !important;
+	bottom: initial;
+	background-color:
+}
+
+.header-fixed .mlogo {
+	opacity: 1;
+	font-size: 150%;
+}
+
+.header-fixed ul a {
+	color: #000 !important;
+	opacity: 0.54;
+}
+
+.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 45%;
+	width: 45%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	background-image: url(../images/logo_wo_text.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
