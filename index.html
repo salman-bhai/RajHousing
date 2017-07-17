@@ -19,6 +19,10 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="css/stylesheet.css">
       <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+
+
 
       <!--JavaScript files-->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
@@ -27,11 +31,15 @@
       </script>
       <script type="text/javascript" src="js/home.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
+      <script src="js/projects.json"></script>
+      <script src="js/vibrant.min.js"></script>
       <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a83d6245-1d3e-4a38-9fbb-a55cd8f4c737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
       
     </head>
 
-<body onload="init()">
+<body onload="init();">
 
   <!-- <div class="header-wrapper"> -->
     <div class="mbackdrop"></div>
@@ -40,15 +48,23 @@
   <!-- </div> -->
 
   <div class="header">
-    <nav class="container">
-      <a href="#" class="mlogo black-text left valign-wrapper">
-        <img src="images/logo_alpha.png" class="valign">&nbsp;&nbsp;
-        Raj Housing
+    <nav class="container nav-wrapper">
+      <a href="#" class="mlogo black-text left">
+        <img src="images/logo_alpha.png" class="valign-content">&nbsp;&nbsp;
+        <div class="valign-content left-align">Raj Housing</div>
       </a>
-      <ul id="nav-mobile" class="right">
-        <li><a href="#">Home</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/about.html">About Us</a></li>
+      <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons black-text">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a style="margin-left: 25px; cursor: initial; display: flex; align-items: center; justify-content: center;"><i class="material-icons left valign">call</i>0251&nbsp;6556969</a></li>
+      </ul>
+      <ul class="side-nav center-align orange black-text" id="mobile-demo">
+        <li><a style="cursor: initial;"><i class="material-icons left valign" style="margin: 0;">call</i>0251&nbsp;6556969</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
   </div>
@@ -63,15 +79,19 @@
               <h3>Landscape Garden</h3>
               <h5 class="light grey-text text-lighten-3">Landscape Ventures</h5>
               Stunning 2 Towers of G+7 &amp; S+7 storey with all ultra modern amenities, surrounded by beautiful landscapes.
+              <br><br>
+              <a href="projects.html?type=ongoing&amp;project=0" class="viewproject white-text">View Project</a>
             </div>
             </a>
         </li>
          <li class="row">
             <div clas="img"><img src="images/carousel/2.jpg"></div>
             <div class="caption left-align">
-             <h3>Ashtavinayak Avenue</h3>
-              <h5 class="light grey-text text-lighten-3">Ashtavinayak Infrastructure</h5>
+             <h3>Landscape Heritage</h3>
+              <h5 class="light grey-text text-lighten-3">Landscape Ventures</h5>
               Stunning 2 Towers of G+7 &amp; S+7 storey with all ultra modern amenities, surrounded by beautiful landscapes.
+              <br><br>
+              <a href="projects.html?type=ongoing&amp;project=2" class="viewproject white-text">View Project</a>
             </div>
             </a>
         </li>
@@ -79,9 +99,9 @@
     </div>
   </div>
 
-  <div class="parallax-container why-us white-text">
+  <div class="parallax-container why-us white-text" style="margin-top: 20px;">
     <div class="parallax"><img src="images/bird after.jpg"></div>
-    <div class="container center">
+    <div class="container center" style="margin-top: 30px;">
       <h4>Why Choose Us?</h4>
       <div class="row">
         <div class="col s12 m4 l4">
@@ -101,14 +121,14 @@
     </div>
   </div>
 
-  <div class="row offers deep-orange">
+  <!--<div class="row offers deep-orange">
     <div class="container">
       <h4 class="white-text">&nbsp;Offers</h4>
       <div class="col s12 m4">
-        <div class="card z-depth-2">
+        <div class="card medium z-depth-2">
           <div class="card-image">
-            <img src="images/carousel/1.jpg">
-            <span class="card-title">Card Title</span>
+            <img src="images/projects/Landscape Garden/3.jpg" class="materialboxed">
+            <span class="card-title">Landscape Garden</span>
           </div>
           <div class="card-content">
             I am a very simple card. I am good at containing small bits of information.
@@ -117,10 +137,10 @@
       </div>
 
       <div class="col s12 m4">
-        <div class="card z-depth-2">
+        <div class="card medium z-depth-2">
           <div class="card-image">
-            <img src="images/carousel/1.jpg">
-            <span class="card-title">Card Title</span>
+            <img src="images/projects/Ashtavinayak Avenue/5.jpg" class="materialboxed">
+            <span class="card-title">Ashtavinayak Avenue</span>
           </div>
           <div class="card-content">
             I am a very simple card. I am good at containing small bits of information.
@@ -129,10 +149,10 @@
       </div>
 
       <div class="col s12 m4">
-        <div class="card z-depth-2">
+        <div class="card medium z-depth-2">
           <div class="card-image">
-            <img src="images/carousel/1.jpg">
-            <span class="card-title">Card Title</span>
+            <img src="images/carousel/1.jpg" class="materialboxed">
+            <span class="card-title">Rattan Raj Towers</span>
           </div>
           <div class="card-content">
             I am a very simple card. I am good at containing small bits of information.
@@ -141,11 +161,43 @@
       </div>
 
     </div>
+  </div>-->
+  <div class="row deep-orange" style="padding-top: 20px; margin-bottom: 0px; padding-bottom: 20px;">
+    <div class="container">
+      <h4 class="white-text">&nbsp;Offers</h4>
+      <div class="col l4 m12 s12">
+        <div id="ongoing-section-0" class="section hoverable offers-hoverable">
+          <img src="images/projects/Landscape Garden/3.jpg" class=" image" height="250px" width="270px">
+          <div class="text-description">
+            <h5 style="margin-bottom: 0px;">Landscape Garden</h5>
+            <h6 style="margin-top: 5px; font-style: italic; color: #999;">Landscape Ventures</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m12 s12">
+        <div id="ongoing-section-1" class="section hoverable offers-hoverable">
+          <img src="images/projects/Ashtavinayak Avenue Phase 1/5.jpg" class=" image" height="250px" width="270px">
+          <div class="text-description">
+            <h5 style="margin-bottom: 0px;">Ashtavinayak Avenue Phase 1</h5>
+            <h6 style="margin-top: 5px; font-style: italic; color: #999;">Ashtavinayak Infrastructure</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m12 s12">
+        <div id="ongoing-section-3" class="section hoverable offers-hoverable">
+          <img src="images/carousel/1.jpg" class=" image" height="250px" width="270px">
+          <div class="text-description">
+            <h5 style="margin-bottom: 0px;">Rattan Raj Towers</h5>
+            <h6 style="margin-top: 5px; font-style: italic; color: #999;">Rattan Raj Lifespaces</h6>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
   <!-- FOOTER -->
-  <footer class="page-footer orange" id="footer"></footer>
+  <footer class="page-footer orange" id="footer" style="margin-top: 0px;"></footer>
 
 </body>
 </html>

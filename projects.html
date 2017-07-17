@@ -19,6 +19,8 @@
 			<link rel="stylesheet" href="css/stylesheet.css">
 			<link rel="stylesheet" href="css/projects.css">
 		    <link rel="stylesheet" href="css/index.css">
+		    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
 
 			<!--JavaScript files-->
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
@@ -30,32 +32,42 @@
 
 			<!-- <script type="text/javascript" src="js/script.js"></script> -->
 			<script type="text/javascript" src="js/projects.js"></script>
-			<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+			<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a83d6245-1d3e-4a38-9fbb-a55cd8f4c737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>	
+			<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 
 		 </head>
 
 		<body onload="init_projects();">
 
 			<div class="header header-fixed orange">
-			    <nav class="container">
-			      <a href="#" class="mlogo black-text left valign-wrapper">
-			        <img src="images/logo_alpha.png" class="valign">&nbsp;&nbsp;
-			        Raj Housing
-			      </a>
-			      <ul id="nav-mobile" class="right">
-			        <li><a href="#">Home</a></li>
-			        <li><a href="/projects.html">Projects</a></li>
-			        <li><a href="/about.html">About Us</a></li>
-			      </ul>
+			    <nav class="container nav-wrapper">
+					<a href="#" class="mlogo black-text left valign-wrapper">
+						<img src="images/logo_alpha.png" class="valign-content">&nbsp;&nbsp;
+        				<div class="valign-content left-align">Raj Housing</div>
+					</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons black-text">menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a style="margin-left: 25px; cursor: initial; display: flex; align-items: center; justify-content: center;"><i class="material-icons left valign">call</i>0251&nbsp;6556969</a></li>
+					</ul>
+					<ul class="side-nav center-align orange black-text" id="mobile-demo">
+						<li><a style="cursor: initial;"><i class="material-icons left valign" style="margin: 0;">call</i>0251&nbsp;6556969</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="about.html">About Us</a></li>
+					</ul>
 			    </nav>
-			  </div>
+			</div>
 
-			<div class="row" style="margin-top: 10px;">
-				<div class="col s12">
-					<ul id="tabs-swipe-demo" class="tabs" style="background-color: #f5f5f5;">
-						<li class="tab col s4"><a style="color: #795548;" href="#ongoing-projects" id="ongoing">Ongoing Projects</a></li>
-						<li class="tab col s4"><a style="color: #795548;" href="#upcoming-projects" id="upcoming">Upcoming Projects</a></li>
-						<li class="tab col s4"><a style="color: #795548;" href="#completed-projects" id="completed">Completed Projects</a></li>
+			<div class="row">
+				<div class="col s12" style="padding: 0;">
+					<ul id="tabs-swipe-demo" class="tabs">
+						<li class="tab col s12 m4 l4"><a style="color: #795548;" href="#ongoing-projects" id="ongoing">Ongoing Projects</a></li>
+						<li class="tab col s12 m4 l4"><a style="color: #795548;" href="#upcoming-projects" id="upcoming">Upcoming Projects</a></li>
+						<li class="tab col s12 m4 l4"><a style="color: #795548;" href="#completed-projects" id="completed">Completed Projects</a></li>
 					</ul>
 					<div id="ongoing-projects" class="container row"></div>
 					<div id="upcoming-projects" class="container row"></div>

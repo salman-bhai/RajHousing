@@ -1,10 +1,30 @@
 function init_projects() {
+	$(document).ready(function() {
+		$(".button-collapse").sideNav();
+		$('.materialboxed').materialbox();
+	});
 	load_ongoing_projects();
 	load_upcoming_projects();
 	load_completed_projects();
+	if (getParameterByName("type") != null)
+	{
+		var t = getParameterByName("type");
+		var p = getParameterByName("project");
+		setTimeout(function(){ $("#" + t).click(); $("#" + t + "-section-" + p).click(); }, 500);
+	}
 }
 
 var cardTop, cardLeft, imgLeft, imgTop, type;
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 function load_ongoing_projects() {
 	var projects_container = document.getElementById("ongoing-projects");
@@ -13,9 +33,9 @@ function load_ongoing_projects() {
 		//console.log(i + 1);
 		var project = ongoing_projects[i];
 		var parameter = project.name.replace(/\s/g,'');
-		projects_container.innerHTML += '<div id="ongoing-section-' + i + '" class="col l4 m12 s12 hoverable section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
+		projects_container.innerHTML += '<div id="ongoing-section-' + i + '" class="col l4 m12 s12 hoverable projectcard section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
 		var section_container = document.getElementById("ongoing-section-" + i);
-		section_container.innerHTML += '<img src="' + project.image + '" class=" image" height="250px" width="270px">';
+		section_container.innerHTML += '<img src="images/projects/' + project.name + '/Icon.jpg" class=" image" height="250px" width="270px">';
 		section_container.innerHTML += '<div id="ongoing-details-' + i + '" class="text-description"></div>';
 		var details_container = document.getElementById("ongoing-details-" + i);
 		details_container.innerHTML += '<h5 style="margin-bottom: 0px;">' + project.name + '</h5>';
@@ -40,9 +60,9 @@ function load_upcoming_projects() {
 		//console.log(i + 1);
 		var project = upcoming_projects[i];
 		var parameter = project.name.replace(/\s/g,'');
-		projects_container.innerHTML += '<div id="upcoming-section-' + i + '" class="col l4 m12 s12 hoverable section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
+		projects_container.innerHTML += '<div id="upcoming-section-' + i + '" class="col l4 m12 s12 hoverable projectcard section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
 		var section_container = document.getElementById("upcoming-section-" + i);
-		section_container.innerHTML += '<img src="' + project.image + '" class="image" height="250px">';
+		section_container.innerHTML += '<img src="images/projects/' + project.name + '/Icon.jpg" class="image" height="250px" width="270px">';
 		section_container.innerHTML += '<div id="upcoming-details-' + i + '" class="text-description"></div>';
 		var details_container = document.getElementById("upcoming-details-" + i);
 		details_container.innerHTML += '<h5 style="margin-bottom: 0px;">' + project.name + '</h5>';
@@ -67,9 +87,9 @@ function load_completed_projects() {
 		//console.log(i + 1);
 		var project = completed_projects[i];
 		var parameter = project.name.replace(/\s/g,'');
-		projects_container.innerHTML += '<div id="completed-section-' + i + '" class="col l4 m12 s12 hoverable section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
+		projects_container.innerHTML += '<div id="completed-section-' + i + '" class="col l4 m12 s12 hoverable projectcard section" style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px;"></div>';
 		var section_container = document.getElementById("completed-section-" + i);
-		section_container.innerHTML += '<img src="' + project.image + '" class="image" height="250px">';
+		section_container.innerHTML += '<img src="images/projects/' + project.name + '/Icon.jpg" class="image" height="250px" width="270px">';
 		section_container.innerHTML += '<div id="completed-details-' + i + '" class="text-description"></div>';
 		var details_container = document.getElementById("completed-details-" + i);
 		details_container.innerHTML += '<h5 style="margin-bottom: 0px;">' + project.name + '</h5>';
@@ -78,7 +98,7 @@ function load_completed_projects() {
 	//var x = "Total Width: " + screen.width + "px";
 	//document.getElementById("ongoing-section-1").innerHTML += x;
 	var ids = "#completed-section-";
-	for(i = 0; i < upcoming_projects.length; i++) {
+	for(i = 0; i < completed_projects.length; i++) {
 		$(ids+i).on('click', function(e){
 			type = "completed";
 			displayProjectInfo.bind(this).call();
@@ -118,6 +138,7 @@ function displayProjectInfo(index) {
 	var bg_color;
 	var img = document.createElement('img');
 	img.src = $(this).find('img').attr('src');
+	console.log(img.src);
 	img.className = "project-img";
 	img.addEventListener('load', function(){
 		var vibrant = new Vibrant(img);
@@ -143,7 +164,7 @@ function displayProjectInfo(index) {
 	heading.innerHTML = project.name;
 	details = document.createElement('div');
 	details.className = "project-card-details container";
-	detail_cont = "<h5 class=\"brown-text light\">PROJECT DETAILS</h5><hr><ul class=\"collapsible\" data-collapsible=\"accordion\"><li><div class=\"collapsible-header\"><div style=\"float: left;\" id=\"details-header\"></div><div style=\"float: right;\"><i class=\"material-icons\">import_export</i></div></div><div class=\"collapsible-body\"><span id=\"details-body\"></span></div></li><li><div class=\"collapsible-header\"><div style=\"float: left;\"><i class=\"material-icons\">folder_open</i>Floor Plans</div><div style=\"float: right;\"><i class=\"material-icons\">import_export</i></div></div><div class=\"collapsible-body\"><div class=\"project-floor-plans\"></div></div></li><li><div class=\"collapsible-header\"><div style=\"float: left;\"><i class=\"material-icons\">card_giftcard</i>Offers</div><div style=\"float: right;\"><i class=\"material-icons\">import_export</i></div></div><div class=\"collapsible-body\"><span>Contact Sales for offers</span></div></li></ul><p class=\"brown-text para\" id=\"details-para\"></p><h5 class=\"brown-text light center\" style=\"padding-top: 20px; padding-bottom: 20px;\"><span class=\"underline\">AMENITIES</span></h5><div class=\"row\"><div class=\"col s12 m4 l4\" id=\"first-row\"></div><div class=\"col s12 m4 l4\" id=\"second-row\"></div><div class=\"col s12 m4 l4\" id=\"third-row\"></div></div><center><div class=\"project-gallery\"></div></center><h5 class=\"brown-text light center\" style=\"padding-top: 20px; padding-bottom: 20px;\"><span class=\"underline\">PROJECT LOCATION</span></h5><div class=\"center\" id=\"iframe-maps\"></div><p class=\"brown-text para\" style=\"font-size: 15px; text-align: center;\" id=\"location\"></p>";
+	detail_cont = "<h5 class=\"brown-text light\">PROJECT DETAILS</h5><hr style=\"margin-bottom: 15px;\"><center><div class=\"slickmain\"></div></center><center><div class=\"slickimg\"></div></center><ul class=\"collapsible\" data-collapsible=\"accordion\"><li><div class=\"collapsible-header\"><div style=\"float: left;\" id=\"details-header\"></div><div style=\"float: right;\"><i class=\"material-icons\">import_export</i></div></div><div class=\"collapsible-body\"><span id=\"details-body\"></span></div></li><li><div class=\"collapsible-header\"><div style=\"float: left;\"><i class=\"material-icons\">card_giftcard</i>Offers</div><div style=\"float: right;\"><i class=\"material-icons\">import_export</i></div></div><div class=\"collapsible-body\"><span>Contact Sales for offers</span></div></li></ul><br><center><div id=\"fpl\"></div></center><p class=\"brown-text para\" id=\"details-para\"></p><h5 class=\"brown-text light center\" style=\"padding-top: 20px; padding-bottom: 20px;\"><span class=\"underline\">FEATURES</span></h5><div class=\"row\" id=\"project-features\"></div><h5 class=\"brown-text light center\" style=\"padding-top: 20px; padding-bottom: 20px;\"><span class=\"underline\">AMENITIES</span></h5><div class=\"row\"><div class=\"col s12 m4 l4\" id=\"first-row\"></div><div class=\"col s12 m4 l4\" id=\"second-row\"></div><div class=\"col s12 m4 l4\" id=\"third-row\"></div></div><h5 class=\"brown-text light center\" style=\"padding-top: 20px; padding-bottom: 20px;\"><span class=\"underline\">PROJECT LOCATION</span></h5><div class=\"center\" id=\"iframe-maps\"></div><p class=\"brown-text para\" style=\"font-size: 15px; text-align: center;\" id=\"location\"></p>";
 	// card_temp = card;
 	$('body').append(body);
 	$('.project-details').append(contents);
@@ -220,18 +241,32 @@ function displayProjectInfo(index) {
 		$("#details-body").append(project.towers_content);
 		$("#details-para").append(project.details_content);
 		$("#iframe-maps").append(project.maps);
-		if(project.fplans){
-			for(var i = 0; i < project['fplans'].length; i++){
-				fp = document.createElement('img');
-				fp.className = "floor-plan materialboxed";
-				fp.src = project.fplans[i];
-				$('.project-floor-plans').append(fp);
+		if(project.fplans > 0){
+			//"<a class=\"waves-effect waves-light btn\" href=\"javascript:;\" id=\"floor-plan-button\">View Floor Plans</a>"
+			var anchortag = document.createElement('a');
+			anchortag.className += "waves-effect waves-light btn";
+			anchortag['href'] = "javascript:;";
+			anchortag['id'] = 'floor-plan-button';
+			anchortag.innerHTML += "view floor plans";
+			var fpobj = [];
+			var fpimgobj;
+			var img_source = "images/projects/" + project.name + "/Floor Plans/";
+			for(var i = 1; i <= project.fplans; i++){
+				fpimgobj = {src: img_source + i + ".jpg"};
+				fpobj.push(fpimgobj);
 			}
+			var floorplandiv = document.getElementById("fpl");
+			floorplandiv.appendChild(anchortag);
+			$("#floor-plan-button").on('click', function() {
+				$.fancybox.open(
+					fpobj,{
+						loop: true,
+						hash: "floor-plan-button"
+					});
+			});
 		} else {
-			$('.project-floor-plans').append('No floor plans available for this project.');
-			$('.project-floor-plans').css('overflowX', 'auto');
+			$('#fpl').append('No floor plans available for this project');
 		}
-
 		l_amenities = project["amenities"].length;
 		distribute = Math.floor(l_amenities / 3);
 		x_traverse = distribute;
@@ -254,18 +289,99 @@ function displayProjectInfo(index) {
 			third_row_handle.innerHTML += '<div class="row"><div class="col s3 m3 l3"><i class="material-icons right red-text">done</i></div><div class="col s9 m9 l9 left-align">' + project["amenities"][z + y + x] + '</div></div>';
 		}
 		source = "images/projects/" + project.name + "/";
+		var imageobjects = [];
+		var imgobj;
 		if(project.images > 1){
-			for(var i = 2; i < project.images; i++){
-				img = document.createElement('img');
-				img.src = source + i + '.jpg';
-				$('.project-gallery').append(img);
+			for(var i = 1; i <= project.images; i++){
+				imgobj = { src : source + i + '.jpg' };
+				imageobjects.push(imgobj);
 			}
 		}
-		
-	}, 300);	
+		source = "images/projects/" + project.name + "/";
+		if(project.images > 1){
+			for(var i = 1; i <= project.images; i++){
+				img = document.createElement('img');
+				img.src = source + i + '.jpg';
+				div_slickmain = document.createElement('div');
+				div_slickmain.appendChild(img);
+				$('.slickmain').append(div_slickmain);
+				img2 = document.createElement('img');
+				img2.src = source + i + '.jpg';
+				img2['height'] = 130;
+				img2['width'] = 210;
+				div_slickimg = document.createElement('div');
+				div_slickimg.appendChild(img2);
+				$('.slickimg').append(div_slickimg);
+			}
+		}
+		if (project.images > 6)
+		{
+			number = 5;
+		}
+		else if (project.images > 4)
+		{
+			number = 3;
+		}
+		else
+		{
+			number = 1;
+		}
+		$(document).ready(function(){
+			$('.slickmain').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.slickimg'
+			});
+			$('.slickimg').slick({
+				slidesToShow: number,
+				slidesToScroll: 1,
+				time: 300,
+				asNavFor: '.slickmain',
+				centerMode: true,
+				autoplay: true,
+				prevArrow:"<span class='prev'><i class='slick-prev material-icons slickarr' style='font-size: 60px;'>&#xE314;</i></span>",
+				nextArrow:"<span class='next'><i class='slick-next material-icons slickarr' style='font-size: 60px;'>&#xE315;</i></span>",
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+		    });
+		});
+		$('.slick-next').click();
+		var feat = document.getElementById('project-features');
+		var list_feat = [
+			'<img src="https://png.icons8.com/park-bench/win10/48" title="Park Bench" width="48" height="48">&nbsp;&nbsp;Landscape Garden',
+			'<img src="https://png.icons8.com/security-checked/win8/48" title="Security Checked" width="48" height="48">&nbsp;&nbsp;Security System Installed',
+			'<img src="https://png.icons8.com/dumbbell/win8/48" title="Dumbbell" width="48" height="48">&nbsp;&nbsp;Gymnasium / Club House',
+			'<img src="https://png.icons8.com/hotel-check-in-filled/ios7/50" title="Hotel Check In Filled" width="50" height="50">&nbsp;&nbsp;Designer Entrance Lobby',
+			'<img src="https://png.icons8.com/playground/android/48" title="Playground" width="48" height="48">&nbsp;&nbsp;Children\' Play Area',
+			'<img src="https://png.icons8.com/electricity/android/48" title="Electricity" width="48" height="48">&nbsp;&nbsp;Power Backup for Elevators'
+		];
+		for (var x = 0; x < project.features.length; x++)
+		{
+			var div_feat = document.createElement('div');
+			div_feat.className = 'col s12 m12 l3 offset-l2 brown-text';
+			div_feat.innerHTML += list_feat[project.features[x] - 1];
+			feat.appendChild(div_feat);
+		}
+	}, 300);
 	setTimeout(function(){
 		$('.collapsible').collapsible();
-		h = $('.project-card-details').height() + $('.project-card-title').height() + 220 + 'px';
+		h = 3000;
 		$('.project-card-details').css('display', 'inherit');
 		$('.project-card-title').css('display', 'inherit');
 		$('.project-card').css({
@@ -276,9 +392,9 @@ function displayProjectInfo(index) {
 			top: '30vh',
 			backgroundColor: '#fff'
 		});
-		setInterval(function(){
+		/*setInterval(function(){
 			$('.project-gallery').animate({scrollLeft: $('.project-gallery').scrollLeft() + $('.project-gallery').find('img').width()}, 500);
-		}, 3000);
+		}, 3000);*/
 		$('.close-button').on('click', closeInfo);
 	}, 300);
 }

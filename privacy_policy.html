@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Raj Housing</title>
+			<title>Projects - Raj Housing</title>
 
 			<!--Import Google Icon Font-->
 			<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,21 +17,79 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 			<link rel="stylesheet" href="css/stylesheet.css">
+			<link rel="stylesheet" href="css/careers.css">
+		    <link rel="stylesheet" href="css/index.css">
 
 			<!--JavaScript files-->
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
 			</script>
-			<script src="js/materialize.js">
-			</script>
+			<script src="js/materialize.js"></script>
+			<script src="js/vibrant.min.js"></script>
+			<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+		    <script type="text/javascript" src="js/home.js"></script>     
+
+			<!-- <script type="text/javascript" src="js/script.js"></script> -->
 			<script type="text/javascript" src="js/privacy_policy.js"></script>
-			<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+			<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a83d6245-1d3e-4a38-9fbb-a55cd8f4c737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 		 </head>
 
-		<body class="indigo lighten-5">
-			<div id="header"></div>
+		<body>
 
-			<div id="footer"></div>
+			<header>
+				<div class="header header-fixed orange">
+				    <nav class="container nav-wrapper">
+						<a href="#" class="mlogo black-text left valign-wrapper">
+							<img src="images/logo_alpha.png" class="valign-content">&nbsp;&nbsp;
+	        				<div class="valign-content left-align">Raj Housing</div>
+						</a>
+						<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons black-text">menu</i></a>
+						<ul id="nav-mobile" class="right hide-on-med-and-down">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a style="margin-left: 25px; cursor: initial; display: flex; align-items: center; justify-content: center;"><i class="material-icons left valign">call</i>0251&nbsp;6556969</a></li>
+						</ul>
+						<ul class="side-nav center-align orange black-text" id="mobile-demo">
+							<li><a style="cursor: initial;"><i class="material-icons left valign" style="margin: 0;">call</i>0251&nbsp;6556969</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+				    </nav>
+				</div>
+			</header>
+
+			<main>
+				<div class="container">
+					<div class="card" style="margin-top: 80px;">
+						<div class="card-content center">
+							<i class="material-icons" style="font-size: 120px;">&#xE32A;</i>
+							<br>
+							<span class="card-title" style="font-size: 36px; font-weight: 300 !important;">Privacy Policy</span>
+							<p style="padding-top: 20px; color: #808080;">
+								Raj Housing places utmost importance on users’ privacy and security.
+								You don’t have to worry about any data being leaked from our website or being used in any unethical way simply because we don’t collect your data. Unlike other websites,we do not store or gather any user data including personal information, location, IP address etc. 
+							</p>
+							<p style="font-weight: 400; font-size: 21px; padding-top: 20px !important;">You can browse securely on our website!</p>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+			<footer class="page-footer orange" id="footer"></footer>
 
 		</body>
+		<style type="text/css">
+			body {
+				display: flex;
+				min-height: 100vh;
+				flex-direction: column;
+			}
+
+			main {
+				flex: 1 0 auto;
+			}
+		</style>
 	</html>

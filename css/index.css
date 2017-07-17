@@ -4,6 +4,17 @@
 	z-index: 100;
 }
 
+nav ul a {
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul a:hover {
+	background-color: inherit;
+}
+
 .mbackdrop {
 	/*position: absolute;
 	top: 0;
@@ -37,7 +48,7 @@
 
 .head-title {
 	position: absolute;
-	top: 0;
+	top: 30px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	   -moz-transform: translateX(-50%);
@@ -124,15 +135,8 @@
 .offers {
 	padding-top: 20px;
 }
-
-footer .icon-image img {
-	margin-top: 6px;
-	height: 40px;
-	width: 40px;
-}
-
 .parallax-container {
-	height: 400px !important;
+	height: 400px;
 }
 
 .parallax-container img {
@@ -151,7 +155,7 @@ footer .icon-image img {
 	font-weight: 100;
 }
 
-.parallax-container a {
+.parallax-container a, .viewproject {
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-left: 10px;
@@ -164,7 +168,283 @@ footer .icon-image img {
 	        transition: all .3s ease-out;
 }
 
-.parallax-container a:hover {
+.parallax-container a:hover, .viewproject:hover {
 	background-color: white;
 	color: #777 !important;
+}
+
+#sidenav-overlay {
+	z-index: -1;
+}
+
+.valign-content {
+	display: inline-table;
+	vertical-align: middle;
+}
+
+#nav-mobile > li > a {
+	min-height: 67px !important;
+}
+
+.side-nav {
+	width: 40% !important;
+}
+
+.card-title {
+	font-weight: 400 !important;
+}
+
+.collapsible {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-left: 0px;
+	border-right: 0px;
+    border-top: 1px solid #ddd;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.collapsible-body {
+	padding: 25px;
+	font-weight: 500;
+}
+
+.collapsible-header:hover {
+	color: #df4a43;
+}
+
+.collapsible li {
+	padding-bottom: 0px;
+}
+
+.project-name {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.section {
+	margin-top: 20px;
+	border-radius: 5px;
+	margin-left: 0px !important;
+	background-color: white;
+}
+
+.section:hover {
+	background-color: white;
+}
+
+.image {
+	border-radius: 5px;
+}
+
+.project-details, .project-details-content, .project-img, .project-card-temp, .project-card {
+	transition: top .3s ease-in, left .3s ease-out, width .3s ease-in-out, height .3s ease-in-out;
+ 	-webkit-transition: top .3s ease-in, left .3s ease-out, height .3s ease-in-out, width .3s ease-in-out;
+ 	-webkit-overflow-scrolling: touch;
+}
+
+#details-para {
+	font-size: 1.1em;
+}
+
+#project-features > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	border: 1px solid #e3e3e3;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.project-details {
+	transition: background-color 0.3s linear;
+	-webkit-transition: background-color 0.3s linear;
+}
+
+.google-maps {
+	width: 600px;
+	height: 450px;
+}
+
+.close-button {
+	position: absolute;
+	top: 2vh;
+	left:5vw;
+	color: #fff;
+	font-size: 30px;
+}
+
+.close-button:hover {
+	cursor: pointer;
+}
+
+.project-card-title {
+	padding-top: 30px;
+	padding-left: 250px; 
+	display: none;
+}
+
+.project-card-details {
+	padding-top: 20px;
+	position: absolute;
+	z-index: 3;
+	display: none;
+}
+
+.project-gallery {
+	display: flex;
+	width: 500px;
+	overflow-x: scroll;
+}
+
+.project-floor-plans > img {
+	width: 400px;
+	height: 150px;
+}
+
+.offers-hoverable {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.prev {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  left: 0px;
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.next {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.slickarr {
+	color: #3e2723;
+}
+
+.fp-arr {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.slickmain {
+	margin-bottom: 20px;
+}
+
+.slickimg {
+	margin-bottom: 30px;
+}
+
+.slickimg > div > div > div {
+	opacity: 0.5;
+}
+
+.slickimg > div > div > div.slick-current {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 992px) {
+	.header-fixed {
+		font-size: 100% !important;
+	}
+	.parallax-container {
+		height: 600px;
+	}
+	.image {
+		border-radius: 5px;
+		display: block;
+		margin: auto;
+	}
+
+	.text-description {
+		text-align: center;
+	}
+
+	.section:hover {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.google-maps {
+		width: 310px;
+		height: 275px;
+		margin-left: -10px;
+	}
+
+	.collapsible {
+		width: 100%;
+		margin: 0px 0px;
+	}
+
+	.nav-location > div > div {
+		max-height: 75px !important;
+	}
+
+	.nav-location {
+		text-align: center;
+		height: 75px;
+		text-overflow: ellipsis;
+	}
+
+	#nav-location-project {
+		max-height: 75px !important;
+		text-overflow: ellipsis;
+	}
+
+	.nav-wrapper {
+		padding-left: 0px;
+	}
+
+	.breadcrumb:before {
+		margin: 1px;
+		max-height: 75px;
+		font-size: 17px;
+	}
+
+	.nav-location > div > div > a {
+		font-size: 16px;
+	}
+
+	.para {
+		text-align: justify;
+	}
+	.card-content {
+		margin-top: 150px;
+		margin-left: 20px !important;
+	}
+	.project-card-title {
+		padding: 10px 0px 0px 0px !important;
+	}
+	.offers-hoverable {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 0px;
+		padding-left: 0px;
+	}
+
+	.slickmain > div > div > div > img {
+		width: auto !important;
+		height: 350px !important;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.slickmain > div > div > div > img {
+		width: auto !important;
+		height: 200px !important;
+	}
 }
