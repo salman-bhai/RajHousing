@@ -1,24 +1,17 @@
 <div class="header">
-  <nav class="brown lighten-2">
+  <nav class="indigo">
     <div class="nav-wrapper container">
-      <a href="https://in.linkedin.com/" class="brand-logo"><img src="images/logo.png" height="110px"></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+      <a href="https://in.linkedin.com/" class="brand-logo"><img src="images/logo.png"></a>
       <ul class="right hide-on-med-and-down">
         <li id="first"><a href="index.html">Home</a></li>
         <li id="second"><a href="team.html">Team</a></li>
         <li id="third"><a href="projects.html">Projects</a></li>
-        <li id="fourth"><a href="gallery.html?type=none&amp;activate=none">Gallery</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li id="fourth"><a href="gallery.html">Gallery</a></li>
       </ul>
     </div>
   </nav>
 </div>
-<!--<script type="text/javascript">
+<script type="text/javascript">
   function getPageName(url) {
       var index = url.lastIndexOf("/") + 1;
       var filenameWithExtension = url.substr(index);
@@ -26,7 +19,6 @@
       return filename;
   }
   $(document).ready(function() {
-    $(".button-collapse").sideNav();
     $("#first").removeClass("active");
     $("#second").removeClass("active");
     $("#third").removeClass("active");
@@ -48,38 +40,11 @@
         break;
     }
   });
-</script>-->
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".button-collapse").sideNav();
-  });
 </script>
-<style type="text/css">
+<!--<style type="text/css">
 
-  nav {
-    height: 100px;
-    line-height: 100px;
+  .header img {
+    
   }
 
-  nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
-      height: 100px;
-      line-height: 100px;
-  }
-
-  nav .button-collapse i {
-      height: 100px;
-      line-height: 100px;
-  }
-
-  nav .brand-logo { 
-      font-size: 1.6rem; 
-  }
-
-  @media only screen and (min-width: 601px){
-      nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-          height: 100px;
-          line-height: 100px;
-      }
-  }
-
-</style>
+</style>-->

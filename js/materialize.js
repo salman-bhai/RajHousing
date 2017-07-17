@@ -7604,6 +7604,14 @@ Picker.extend( 'pickadate', DatePicker )
           }
         }
 
+        if (options.startHeight) {
+        	view.css('height', options.startHeight);
+
+        	if (showIndicators) {
+        		view.find('.carousel-fixed-item').addClass('with-indicators');
+        	}
+        }
+
 
         view.addClass('initialized');
         pressed = false;

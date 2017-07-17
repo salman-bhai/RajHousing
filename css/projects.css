@@ -6,6 +6,52 @@ h5 a:hover {
 	color: #ef5350;
 }
 
+body {
+	margin-top: 70px;
+}
+
+.collapsible {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-left: 0px;
+	border-right: 0px;
+    border-top: 1px solid #ddd;
+    width: 50%;
+    margin: 0px auto;
+}
+
+.collapsible-body {
+	padding: 25px;
+	font-weight: 500;
+}
+
+.collapsible-header:hover {
+	color: #df4a43;
+}
+
+.collapsible li {
+	padding-bottom: 0px;
+}
+
+.project-name {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.underline {
+	border-bottom: 5px double #795548;
+}
+
+.google-maps {
+	width: 600px;
+	height: 450px;
+}
+
+.para {
+	line-height: 1.2;
+}
+
 .space {
 	display: inline-block;
 	padding: 6px 10px;
@@ -14,6 +60,20 @@ h5 a:hover {
 	border-radius: 4px;
 	border-color: #bdbdbd;
 	color: #757575;
+}
+
+.project-gallery {
+	margin-left: 0%;
+	display: flex;
+	width: 650px;
+	overflow-x: scroll;
+	transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+
+.project-gallery > img {
+	width: 100% !important;
+	height: 400px;
 }
 
 .section {
@@ -38,6 +98,58 @@ h5 a:hover {
 	background-color: #bcaaa4;
 }
 
+.project-details, .project-details-content, .project-img, .project-card-temp, .project-card {
+	transition: top .3s ease-in, left .3s ease-out, width .3s ease-in-out, height .3s ease-in-out;
+ 	-webkit-transition: top .3s ease-in, left .3s ease-out, height .3s ease-in-out, width .3s ease-in-out;
+}
+
+.project-details {
+	transition: background-color 0.3s linear;
+	-webkit-transition: background-color 0.3s linear;
+}
+
+.close-button {
+	position: absolute;
+	top: 2vh;
+	left:5vw;
+	color: #fff;
+	font-size: 30px;
+}
+
+.close-button:hover {
+	cursor: pointer;
+}
+
+.project-card-title {
+	padding-top: 30px;
+	padding-left: 250px; 
+	display: none;
+}
+
+.project-card-details {
+	padding-top: 20px;
+	position: absolute;
+	z-index: 3;
+	display: none;
+}
+
+.project-gallery::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent; 
+}
+
+.project-floor-plans {
+	margin-left: 0%;
+	display: flex;
+	width: 400px;
+	overflow-x: scroll;
+}
+
+.project-floor-plans > img {
+	width: 400px;
+	height: 150px;
+}
+
 @media only screen and (max-width: 992px) {
 	.image {
 		border-radius: 5px;
@@ -54,5 +166,62 @@ h5 a:hover {
 		-moz-box-shadow: none;
 		box-shadow: none;
 		background-color: #f5f5f5;
+	}
+		.google-maps {
+		width: 310px;
+		height: 275px;
+		margin-left: -10px;
+	}
+
+	.container {
+		text-align: center;
+	}
+
+	.collapsible {
+		width: 100%;
+		margin: 0px 0px;
+	}
+
+	.nav-location > div > div {
+		max-height: 75px !important;
+	}
+
+	.nav-location {
+		text-align: center;
+		height: 75px;
+		text-overflow: ellipsis;
+	}
+
+	#nav-location-project {
+		max-height: 75px !important;
+		text-overflow: ellipsis;
+	}
+
+	.nav-wrapper {
+		padding-left: 0px;
+	}
+
+	.breadcrumb:before {
+		margin: 1px;
+		max-height: 75px;
+		font-size: 17px;
+	}
+
+	.nav-location > div > div > a {
+		font-size: 16px;
+	}
+
+	.para {
+		text-align: justify;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.card-content {
+		margin-top: 125px;
+		margin-left: 20px !important;
+	}
+	.project-card-title {
+		padding: 10px 0px 0px 0px; 
 	}
 }

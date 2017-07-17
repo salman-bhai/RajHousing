@@ -18,21 +18,37 @@
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 			<link rel="stylesheet" href="css/stylesheet.css">
 			<link rel="stylesheet" href="css/projects.css">
+		    <link rel="stylesheet" href="css/index.css">
 
 			<!--JavaScript files-->
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
 			</script>
-			<script src="js/materialize.js">
-			</script>
-			<script type="text/javascript" src="js/script.js"></script>
+			<script src="js/materialize.js"></script>
+			<script src="js/projects.json"></script>
+			<script src="js/vibrant.min.js"></script>
+		    <script type="text/javascript" src="js/home.js"></script>     
+
+			<!-- <script type="text/javascript" src="js/script.js"></script> -->
 			<script type="text/javascript" src="js/projects.js"></script>
 			<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 		 </head>
 
-		<body onload="init(); init_projects();">
+		<body onload="init_projects();">
 
-			<div id="header"></div>
+			<div class="header header-fixed orange">
+			    <nav class="container">
+			      <a href="#" class="mlogo black-text left valign-wrapper">
+			        <img src="images/logo_alpha.png" class="valign">&nbsp;&nbsp;
+			        Raj Housing
+			      </a>
+			      <ul id="nav-mobile" class="right">
+			        <li><a href="#">Home</a></li>
+			        <li><a href="/projects.html">Projects</a></li>
+			        <li><a href="/about.html">About Us</a></li>
+			      </ul>
+			    </nav>
+			  </div>
 
 			<div class="row" style="margin-top: 10px;">
 				<div class="col s12">
@@ -41,13 +57,13 @@
 						<li class="tab col s4"><a style="color: #795548;" href="#upcoming-projects" id="upcoming">Upcoming Projects</a></li>
 						<li class="tab col s4"><a style="color: #795548;" href="#completed-projects" id="completed">Completed Projects</a></li>
 					</ul>
-					<div id="ongoing-projects" class="container"></div>
-					<div id="upcoming-projects" class="container"></div>
-					<div id="completed-projects" class="container"></div>
+					<div id="ongoing-projects" class="container row"></div>
+					<div id="upcoming-projects" class="container row"></div>
+					<div id="completed-projects" class="container row"></div>
 				</div>
 			</div>
 
-			<div id="footer"></div>
+			<footer class="page-footer orange" id="footer"></footer>
 
 		</body>
 	</html>

@@ -1,91 +1,151 @@
 <!DOCTYPE html>
-<html>
-  <head>  
+  <html>
+    <head>  
 
-    <title>Raj Housing</title>
+      <title>Raj Housing</title>
 
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!--Meta tags-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
-      <meta name="author" content="Salman Shah">
-    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <!--Meta tags-->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="keywords" content="Salman Shah, Intern, Data Science, Machine Learning">
+        <meta name="author" content="Salman Shah">
+      <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
 
-    <!--CSS Files-->
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/stylesheet.css">
+      <!--CSS Files-->
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="css/index.css">
 
-    <!--JavaScript files-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-    </script>
-    <script src="js/materialize.js">
-    </script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="8dc93651-e81b-4ab1-ad87-fc8a849d9c24";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-    
-  </head>
+      <!--JavaScript files-->
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+      </script>
+      <script src="js/materialize.js">
+      </script>
+      <script type="text/javascript" src="js/home.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a83d6245-1d3e-4a38-9fbb-a55cd8f4c737";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+      
+    </head>
 
-  <body onload="init();">
+<body onload="init()">
 
-    <div id="header"></div>
+  <!-- <div class="header-wrapper"> -->
+    <div class="mbackdrop"></div>
+    <div class="logo"><img src="images/logo_wo_text.png"/></div>
+    <div class="head-title container">Raj Housing</div>
+  <!-- </div> -->
 
-    <!--<div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2" href="projects.html">upcoming projects</a>
-      </div>
-      <div class="carousel-item red white-text" href="#one!">
-        <h2>First Panel</h2>
-        <p class="white-text">This is your first panel</p>
-      </div>
-      <div class="carousel-item amber white-text" href="#two!">
-        <h2>Second Panel</h2>
-        <p class="white-text">This is your second panel</p>
-      </div>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/1.jpg" width="800" height="600"></a>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/2.jpg" width="800" height="600"></a>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/3.jpg" width="800" height="600"></a>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/4.jpg" width="800" height="600"></a>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/5.jpg" width="800" height="600"></a>
-      <a class="carousel-item" href="#one!"><img src="images/carousel/6.jpg" width="800" height="600"></a>
-    </div>-->
+  <div class="header">
+    <nav class="container">
+      <a href="#" class="mlogo black-text left valign-wrapper">
+        <img src="images/logo_alpha.png" class="valign">&nbsp;&nbsp;
+        Raj Housing
+      </a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="#">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
 
+  <div class="latest-projects container" style="margin-top: 7%">
+    <h4 class="mgrey">Latest Projects</h4>
     <div class="slider">
       <ul class="slides">
-        <li>
-          <img src="images/carousel/1.jpg">
+        <li class="row">
+            <div clas="img"><img src="images/carousel/1.jpg"></div>
+            <div class="caption left-align">
+              <h3>Landscape Garden</h3>
+              <h5 class="light grey-text text-lighten-3">Landscape Ventures</h5>
+              Stunning 2 Towers of G+7 &amp; S+7 storey with all ultra modern amenities, surrounded by beautiful landscapes.
+            </div>
+            </a>
         </li>
-        <li>
-          <img src="images/carousel/2.jpg">
-        </li>
-        <li>
-          <img src="images/carousel/3.jpg">
-        </li>
-        <li>
-          <img src="images/carousel/4.jpg">
-        </li>
-        <li>
-          <img src="images/carousel/5.jpg">
-        </li>
-        <li>
-          <img src="images/carousel/6.jpg">
+         <li class="row">
+            <div clas="img"><img src="images/carousel/2.jpg"></div>
+            <div class="caption left-align">
+             <h3>Ashtavinayak Avenue</h3>
+              <h5 class="light grey-text text-lighten-3">Ashtavinayak Infrastructure</h5>
+              Stunning 2 Towers of G+7 &amp; S+7 storey with all ultra modern amenities, surrounded by beautiful landscapes.
+            </div>
+            </a>
         </li>
       </ul>
     </div>
+  </div>
 
+  <div class="parallax-container why-us white-text">
+    <div class="parallax"><img src="images/bird after.jpg"></div>
+    <div class="container center">
+      <h4>Why Choose Us?</h4>
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <div class="count-data" data-count="12">0</div>
+          <div class="count-name">Properties Developed</div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="count-data" data-count="849">0</div>
+          <div class="count-name">Happy Families</div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="count-data" data-count="14">0</div>
+          <div class="count-name">Upcoming Projects</div>
+        </div>
+      </div><br><br>
+      <a class="white-text" href="about.html">Know More</a>
+    </div>
+  </div>
+
+  <div class="row offers deep-orange">
     <div class="container">
-      <div class="card" style="margin-top: 0px;">
-        <div class="card-content">
-          <h4 class="center">Bricking Your Dreams Since 2006</h4>
-          <h5 class="center light">We at Raj Housing believe that everyone deserves to find their dream home</h5>
-          <p>Home is where love resides, memories are made, laughter echoes and happiness is shared. Keeping this in mind, Naveen Bansal established Raj Housing, a group of real estate companies in 2006 with the purpose of providing people their dream home. Mr. Bansal, with more than 10 years of experience in his field knows the right blend of materials which make a perfect home. Raj Housing brings what people envisage to reality with world class construction crew, materials and equipment.  Keeping in mind the needs of modern families, our houses have been  carefully crafted with access to all amenities.  We believe in providing our customers the best and we will be there to assist you through the whole process of buying a house.</p>
+      <h4 class="white-text">&nbsp;Offers</h4>
+      <div class="col s12 m4">
+        <div class="card z-depth-2">
+          <div class="card-image">
+            <img src="images/carousel/1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            I am a very simple card. I am good at containing small bits of information.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="footer"></div>
-  </body>
+      <div class="col s12 m4">
+        <div class="card z-depth-2">
+          <div class="card-image">
+            <img src="images/carousel/1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            I am a very simple card. I am good at containing small bits of information.
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card z-depth-2">
+          <div class="card-image">
+            <img src="images/carousel/1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            I am a very simple card. I am good at containing small bits of information.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="page-footer orange" id="footer"></footer>
+
+</body>
 </html>
